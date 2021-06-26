@@ -1,2 +1,11 @@
 @charset "utf-8";
 @import 'reset';
+
+section {
+  width: 600px;
+  margin: 100px auto;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+}
