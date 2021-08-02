@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap");
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 ul,
 ol,
@@ -33,5 +34,36 @@ select {
   position: absolute;
   top: -9999px;
   opacity: 0; }
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  background-color: #e8e8e8; }
+  .main .inner {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .main .inner .intro {
+      font: bold 50px/1.5 "Spoqa Han Sans Neo", sans-serif; }
+    .main .inner .intro_desc {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 23%;
+      font: 400 14px/1.6 "Spoqa Han Sans Neo", sans-serif;
+      word-break: keep-all; }
+    .main .inner .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between; }
+      .main .inner .content article {
+        width: 24%;
+        min-height: 300px;
+        border: 1px solid #000; }
 
 /*# sourceMappingURL=style.css.map */
