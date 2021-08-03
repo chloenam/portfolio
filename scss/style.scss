@@ -23,13 +23,11 @@
 
     .intro {
       font: bold 50px/1.5 $fontS;
+      margin-bottom: 50px;
     }
 
     .intro_desc {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 23%;
+      width: 20%;
       font: 400 14px/1.6 $fontS;
       word-break: keep-all;
     }
@@ -44,7 +42,7 @@
       width: 100%;
 
       .box {
-        width: 23%;
+        width: 25%;
 
         .title {
           margin-bottom: 20px;
@@ -72,6 +70,7 @@
           left: 100%;
           width: 100%;
           height: 100vh;
+          padding: 30px;
           background-color: $light_gray;
           transition: left 1s ease;
           z-index: 3;
@@ -79,6 +78,154 @@
           &.on {
             left: 0;
           }
+
+          .bgCircle {
+            position: absolute;
+            top: 50%;
+            right: 15vw;
+            transform: translateY(-50%);
+            width: 650px;
+            height: 650px;
+            background-color: $yellow;
+            border-radius: 50%;
+            filter: blur(20px);
+          }
+
+          .inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .subIntro {
+              a {
+                font: bold 30px/1.5 $fontS;
+                color: $dark_black;
+              }
+            }
+
+            .project {
+              display: flex;
+              justify-content: center;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 70vw;
+
+              .left {
+                margin-right: 50px;
+
+                .title {
+                  display: block;
+                  font: 500 italic 80px/1 $fontP;
+                  margin-bottom: 50px;
+                  text-align: right;
+                }
+
+                .projectPic {
+                  width: 500px;
+                  height: 300px;
+                  border: 1px solid #000;
+                }
+              }
+
+              .right {
+                .subTxt {
+                  .workDesc {
+                    font: 400 16px/1.6 $fontS;
+                    color: $dark_black;
+                    margin: 10px 0 30px;
+                  }
+
+                  .arrow {
+                    position: relative;
+                    display: block;
+                    margin-bottom: 30px;
+                    width: 180px;
+                    height: 2px;
+                    background-color: $dark_black;
+                    text-indent: -99999px;
+                    font-size: 0;
+
+                    &::before {
+                      content: '';
+                      position: absolute;
+                      right: 0;
+                      top: 0;
+                      display: block;
+                      width: 12px;
+                      height: inherit;
+                      background-color: inherit;
+                      transform-origin: right center;
+                      transform: rotate(45deg);
+                    }
+
+                    &::after {
+                      content: '';
+                      position: absolute;
+                      right: 0;
+                      top: 0;
+                      display: block;
+                      width: 12px;
+                      height: inherit;
+                      background-color: inherit;
+                      transform-origin: right center;
+                      transform: rotate(-45deg);
+                    }
+                  }
+
+                  .hashTag {
+                    font: 400 20px/1 $fontP;
+                  }
+                }
+              }
+
+              .btns {
+                margin-top: 70px;
+                .btn {
+                  margin-bottom: 20px;
+
+                  a {
+                    display: block;
+                    width: 100px;
+                    height: 50px;
+                    font: 500 20px/50px $fontP;
+                    color: $dark_black;
+                    text-transform: capitalize;
+                    transition: 0.35s;
+
+                    &:hover {
+                      font-weight: bold;
+                      font-size: 22px;
+                    }
+                  }
+                }
+              }
+            }
+
+            .prev {
+              position: absolute;
+              right: 0;
+              top: 50%;
+              width: 100px;
+              height: 100px;
+              margin-top: -50px;
+              border-radius: 50%;
+              background-color: $dark_gray;
+              font: 400 16px/100px $fontE;
+              text-align: center;
+              color: $white;
+              transition: 0.35s;
+
+              &:hover {
+                animation: circle 1.5s linear infinite;
+              }
+            }
+          }
+        }
+
+        &.visual {
+          width: 20%;
         }
 
         &.about {
@@ -123,5 +270,14 @@
 
   &.on {
     left: 0;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
