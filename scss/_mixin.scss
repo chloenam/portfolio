@@ -1,0 +1,35 @@
+@mixin arrow_bar($w, $c) {
+  position: relative;
+  display: block;
+  width: $w;
+  height: 2px;
+  background-color: $c;
+  text-indent: -99999px;
+  font-size: 0;
+}
+
+@mixin arrow_a_top {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 12px;
+  height: inherit;
+  background-color: inherit;
+  transform-origin: right center;
+  transform: rotate(45deg);
+}
+
+@mixin arrow_a_bottom {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 12px;
+  height: inherit;
+  background-color: inherit;
+  transform-origin: right center;
+  transform: rotate(-45deg);
+}
