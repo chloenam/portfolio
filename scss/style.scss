@@ -21,17 +21,6 @@
     height: 100%;
     position: relative;
 
-    .intro {
-      font: bold 50px/1.5 $fontS;
-      margin-bottom: 50px;
-    }
-
-    .intro_desc {
-      width: 20%;
-      font: 400 14px/1.6 $fontS;
-      word-break: keep-all;
-    }
-
     .content {
       display: flex;
       justify-content: space-between;
@@ -42,6 +31,7 @@
       width: 100%;
 
       .box {
+        position: relative;
         width: 25%;
 
         .title {
@@ -106,8 +96,8 @@
             top: 50%;
             right: 15vw;
             transform: translateY(-50%);
-            width: 650px;
-            height: 650px;
+            width: 40vw;
+            height: 40vw;
             background-color: $yellow;
             border-radius: 50%;
             filter: blur(20px);
@@ -120,7 +110,7 @@
 
             .subIntro {
               a {
-                font: bold 30px/1.5 $fontS;
+                font: bold 2vw/1.5 $fontS;
                 color: $dark_black;
               }
             }
@@ -132,20 +122,20 @@
               left: 50%;
               top: 50%;
               transform: translate(-50%, -50%);
-              width: 70vw;
+              width: 75vw;
 
               .left {
-                margin-right: 50px;
+                margin-right: 4vw;
 
                 .title {
                   display: block;
-                  font: 500 italic 80px/1 $fontP;
-                  margin-bottom: 50px;
+                  font: 500 italic 4.5vw/1 $fontP;
+                  margin-bottom: 5vh;
                   text-align: right;
                 }
 
                 .projectPic {
-                  width: 500px;
+                  width: 600px;
                   height: 300px;
                   border: 1px solid #000;
                 }
@@ -154,7 +144,7 @@
               .right {
                 .subTxt {
                   .workDesc {
-                    font: 400 16px/1.6 $fontS;
+                    font: 400 1vw/1.6 $fontS;
                     color: $dark_black;
                     margin: 10px 0 30px;
                   }
@@ -173,7 +163,7 @@
                   }
 
                   .hashTag {
-                    font: 400 20px/1 $fontP;
+                    font: 400 1.2vw/1.4 $fontP;
                   }
                 }
               }
@@ -187,14 +177,14 @@
                     display: block;
                     width: 100px;
                     height: 50px;
-                    font: 500 20px/50px $fontP;
+                    font: 500 1.2vw/50px $fontP;
                     color: $dark_black;
                     text-transform: capitalize;
                     transition: 0.35s;
 
                     &:hover {
                       font-weight: bold;
-                      font-size: 22px;
+                      transform: scale(1.1);
                     }
                   }
                 }
@@ -210,7 +200,7 @@
               margin-top: -50px;
               border-radius: 50%;
               background-color: $dark_gray;
-              font: 400 16px/100px $fontE;
+              font: 400 1vw/100px $fontE;
               text-align: center;
               color: $white;
               transition: 0.35s;
@@ -222,8 +212,35 @@
           }
         }
 
-        &.visual {
+        &.intro {
           width: 20%;
+          height: calc(100vh - 60px);
+
+          .intro_tit {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font: bold 3vw/1.5 $fontS;
+            color: $dark_black;
+          }
+
+          .intro_desc {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            font: 400 0.9vw/1.6 $fontS;
+            color: $dark_black;
+            word-break: keep-all;
+          }
+
+          .guide_txt {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font: 400 0.8vw/1.6 $fontS;
+            color: $light_black;
+            word-break: keep-all;
+          }
         }
 
         &.about {

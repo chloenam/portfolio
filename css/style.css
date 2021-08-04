@@ -46,13 +46,6 @@ select {
     width: 100%;
     height: 100%;
     position: relative; }
-    .main .inner .intro {
-      font: bold 50px/1.5 "Spoqa Han Sans Neo", sans-serif;
-      margin-bottom: 50px; }
-    .main .inner .intro_desc {
-      width: 20%;
-      font: 400 14px/1.6 "Spoqa Han Sans Neo", sans-serif;
-      word-break: keep-all; }
     .main .inner .content {
       display: flex;
       justify-content: space-between;
@@ -62,6 +55,7 @@ select {
       left: 0;
       width: 100%; }
       .main .inner .content .box {
+        position: relative;
         width: 25%; }
         .main .inner .content .box .title {
           margin-bottom: 20px;
@@ -131,8 +125,8 @@ select {
             top: 50%;
             right: 15vw;
             transform: translateY(-50%);
-            width: 650px;
-            height: 650px;
+            width: 40vw;
+            height: 40vw;
             background-color: #dfbf32;
             border-radius: 50%;
             filter: blur(20px); }
@@ -141,7 +135,7 @@ select {
             width: 100%;
             height: 100%; }
             .main .inner .content .box .subPage .inner .subIntro a {
-              font: bold 30px/1.5 "Spoqa Han Sans Neo", sans-serif;
+              font: bold 2vw/1.5 "Spoqa Han Sans Neo", sans-serif;
               color: #222; }
             .main .inner .content .box .subPage .inner .project {
               display: flex;
@@ -150,20 +144,20 @@ select {
               left: 50%;
               top: 50%;
               transform: translate(-50%, -50%);
-              width: 70vw; }
+              width: 75vw; }
               .main .inner .content .box .subPage .inner .project .left {
-                margin-right: 50px; }
+                margin-right: 4vw; }
                 .main .inner .content .box .subPage .inner .project .left .title {
                   display: block;
-                  font: 500 italic 80px/1 "Poppins", sans-serif;
-                  margin-bottom: 50px;
+                  font: 500 italic 4.5vw/1 "Poppins", sans-serif;
+                  margin-bottom: 5vh;
                   text-align: right; }
                 .main .inner .content .box .subPage .inner .project .left .projectPic {
-                  width: 500px;
+                  width: 600px;
                   height: 300px;
                   border: 1px solid #000; }
               .main .inner .content .box .subPage .inner .project .right .subTxt .workDesc {
-                font: 400 16px/1.6 "Spoqa Han Sans Neo", sans-serif;
+                font: 400 1vw/1.6 "Spoqa Han Sans Neo", sans-serif;
                 color: #222;
                 margin: 10px 0 30px; }
               .main .inner .content .box .subPage .inner .project .right .subTxt .arrow {
@@ -198,7 +192,7 @@ select {
                   transform-origin: right center;
                   transform: rotate(-45deg); }
               .main .inner .content .box .subPage .inner .project .right .subTxt .hashTag {
-                font: 400 20px/1 "Poppins", sans-serif; }
+                font: 400 1.2vw/1.4 "Poppins", sans-serif; }
               .main .inner .content .box .subPage .inner .project .btns {
                 margin-top: 70px; }
                 .main .inner .content .box .subPage .inner .project .btns .btn {
@@ -207,13 +201,13 @@ select {
                     display: block;
                     width: 100px;
                     height: 50px;
-                    font: 500 20px/50px "Poppins", sans-serif;
+                    font: 500 1.2vw/50px "Poppins", sans-serif;
                     color: #222;
                     text-transform: capitalize;
                     transition: 0.35s; }
                     .main .inner .content .box .subPage .inner .project .btns .btn a:hover {
                       font-weight: bold;
-                      font-size: 22px; }
+                      transform: scale(1.1); }
             .main .inner .content .box .subPage .inner .prev {
               position: absolute;
               right: 0;
@@ -223,14 +217,35 @@ select {
               margin-top: -50px;
               border-radius: 50%;
               background-color: #b7b7b7;
-              font: 400 16px/100px "Exo", sans-serif;
+              font: 400 1vw/100px "Exo", sans-serif;
               text-align: center;
               color: #fff;
               transition: 0.35s; }
               .main .inner .content .box .subPage .inner .prev:hover {
                 animation: circle 1.5s linear infinite; }
-        .main .inner .content .box.visual {
-          width: 20%; }
+        .main .inner .content .box.intro {
+          width: 20%;
+          height: calc(100vh - 60px); }
+          .main .inner .content .box.intro .intro_tit {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font: bold 3vw/1.5 "Spoqa Han Sans Neo", sans-serif;
+            color: #222; }
+          .main .inner .content .box.intro .intro_desc {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            font: 400 0.9vw/1.6 "Spoqa Han Sans Neo", sans-serif;
+            color: #222;
+            word-break: keep-all; }
+          .main .inner .content .box.intro .guide_txt {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font: 400 0.8vw/1.6 "Spoqa Han Sans Neo", sans-serif;
+            color: #444;
+            word-break: keep-all; }
         .main .inner .content .box.about .item {
           width: 100%;
           height: 25vh;
