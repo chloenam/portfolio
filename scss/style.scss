@@ -51,9 +51,31 @@
         }
 
         .item {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: 15px;
           margin-bottom: 20px;
           cursor: pointer;
           transition: 0.35s;
+
+          .itemTit {
+            font: bold 14px/1.4 $fontS;
+            color: $white;
+            text-transform: uppercase;
+          }
+
+          .arrow {
+            @include arrow_bar(60px, $white);
+            margin-bottom: 10px;
+            &::before {
+              @include arrow_a_top;
+            }
+
+            &::after {
+              @include arrow_a_bottom;
+            }
+          }
 
           &:hover {
             box-shadow: 5px 5px 15px rgba(156, 156, 156, 0.5);
@@ -138,39 +160,15 @@
                   }
 
                   .arrow {
-                    position: relative;
-                    display: block;
+                    @include arrow_bar(180px, $dark_black);
                     margin-bottom: 30px;
-                    width: 180px;
-                    height: 2px;
-                    background-color: $dark_black;
-                    text-indent: -99999px;
-                    font-size: 0;
 
                     &::before {
-                      content: '';
-                      position: absolute;
-                      right: 0;
-                      top: 0;
-                      display: block;
-                      width: 12px;
-                      height: inherit;
-                      background-color: inherit;
-                      transform-origin: right center;
-                      transform: rotate(45deg);
+                      @include arrow_a_top;
                     }
 
                     &::after {
-                      content: '';
-                      position: absolute;
-                      right: 0;
-                      top: 0;
-                      display: block;
-                      width: 12px;
-                      height: inherit;
-                      background-color: inherit;
-                      transform-origin: right center;
-                      transform: rotate(-45deg);
+                      @include arrow_a_bottom;
                     }
                   }
 
