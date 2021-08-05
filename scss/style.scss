@@ -41,6 +41,7 @@
         }
 
         .item {
+          position: relative;
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
@@ -48,16 +49,36 @@
           margin-bottom: 20px;
           cursor: pointer;
           transition: 0.35s;
+          overflow: hidden;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(100%);
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $dark_black;
+            opacity: 0;
+            transition: 0.35s;
+            z-index: 1;
+          }
 
           .itemTit {
+            position: relative;
             font: bold 14px/1.4 $fontS;
             color: $white;
             text-transform: uppercase;
+            z-index: 2;
           }
 
           .arrow {
             @include arrow_bar(60px, $white);
             margin-bottom: 10px;
+            z-index: 2;
+
             &::before {
               @include arrow_a_top;
             }
@@ -69,6 +90,11 @@
 
           &:hover {
             box-shadow: 5px 5px 15px rgba(156, 156, 156, 0.5);
+
+            &::after {
+              transform: translateY(0);
+              opacity: 1;
+            }
           }
 
           &:nth-last-child(2) {
@@ -85,7 +111,7 @@
           padding: 30px;
           background-color: $light_gray;
           transition: left 1s ease;
-          z-index: 3;
+          z-index: 6;
 
           &.on {
             left: 0;
@@ -112,82 +138,6 @@
               a {
                 font: bold 2vw/1.5 $fontS;
                 color: $dark_black;
-              }
-            }
-
-            .project {
-              display: flex;
-              justify-content: center;
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%);
-              width: 75vw;
-
-              .left {
-                margin-right: 4vw;
-
-                .title {
-                  display: block;
-                  font: 500 italic 4.5vw/1 $fontP;
-                  margin-bottom: 5vh;
-                  text-align: right;
-                }
-
-                .projectPic {
-                  width: 600px;
-                  height: 300px;
-                  border: 1px solid #000;
-                }
-              }
-
-              .right {
-                .subTxt {
-                  .workDesc {
-                    font: 400 1vw/1.6 $fontS;
-                    color: $dark_black;
-                    margin: 10px 0 30px;
-                  }
-
-                  .arrow {
-                    @include arrow_bar(180px, $dark_black);
-                    margin-bottom: 30px;
-
-                    &::before {
-                      @include arrow_a_top;
-                    }
-
-                    &::after {
-                      @include arrow_a_bottom;
-                    }
-                  }
-
-                  .hashTag {
-                    font: 400 1.2vw/1.4 $fontP;
-                  }
-                }
-              }
-
-              .btns {
-                margin-top: 70px;
-                .btn {
-                  margin-bottom: 20px;
-
-                  a {
-                    display: block;
-                    width: 100px;
-                    height: 50px;
-                    font: 500 1.2vw/50px $fontP;
-                    color: $dark_black;
-                    text-transform: capitalize;
-                    transition: 0.35s;
-
-                    &:hover {
-                      font-weight: bold;
-                      transform: scale(1.1);
-                    }
-                  }
-                }
               }
             }
 
@@ -267,6 +217,172 @@
             height: 15vh;
             background-color: $yellow;
           }
+
+          .subPage {
+            .project {
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 75vw;
+
+              .left {
+                margin-right: 4vw;
+
+                .title {
+                  display: block;
+                  font: 500 italic 4.5vw/1 $fontP;
+                  margin-bottom: 5vh;
+                  text-align: right;
+                }
+
+                .projectPic {
+                  width: 600px;
+                  height: 300px;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                  }
+                }
+              }
+
+              .right {
+                .subTxt {
+                  .workDesc {
+                    font: 400 1vw/1.6 $fontS;
+                    color: $dark_black;
+                    margin: 10px 0 30px;
+                  }
+
+                  .arrow {
+                    @include arrow_bar(180px, $dark_black);
+                    margin-bottom: 30px;
+
+                    &::before {
+                      @include arrow_a_top;
+                    }
+
+                    &::after {
+                      @include arrow_a_bottom;
+                    }
+                  }
+
+                  .hashTag {
+                    font: 400 1.2vw/1.4 $fontP;
+                  }
+                }
+              }
+
+              .projectBox {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 80%;
+                margin-top: 50px;
+
+                .toyItem {
+                  width: 30%;
+                  height: 35vh;
+                  background-color: $light_gray;
+
+                  a {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    &:hover {
+                      .txt {
+                        transform: translateY(0);
+                        opacity: 1;
+                      }
+                    }
+
+                    .thumb {
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                    }
+
+                    .txt {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      display: flex;
+                      justify-content: center;
+                      align-content: center;
+                      flex-wrap: wrap;
+                      width: 100%;
+                      height: 100%;
+                      background-color: rgba(0, 0, 0, 0.5);
+                      text-align: center;
+                      transform: translateY(-100%);
+                      opacity: 0;
+                      transition: 0.5s;
+
+                      h4 {
+                        width: 100%;
+                        margin-bottom: 30px;
+                        font: bold 30px/1 $fontP;
+                        color: $yellow;
+                      }
+
+                      span {
+                        font: bold 16px/1 $fontP;
+                        color: $white;
+                        text-transform: uppercase;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .btns {
+                margin-top: 70px;
+                .btn {
+                  margin-bottom: 20px;
+
+                  &:hover {
+                    span {
+                      transform: translateX(200%);
+                      opacity: 1;
+                    }
+                  }
+
+                  a {
+                    display: block;
+                    width: 100px;
+                    height: 50px;
+                    font: 500 1.2vw/50px $fontP;
+                    color: $dark_black;
+                    text-transform: capitalize;
+                    transition: 0.35s;
+                  }
+
+                  span {
+                    @include arrow_bar(50px, $dark_black);
+                    margin-top: -25px;
+                    opacity: 0;
+                    transition: 0.5s;
+
+                    &::before {
+                      @include arrow_a_top;
+                    }
+
+                    &::after {
+                      @include arrow_a_bottom;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -281,7 +397,7 @@
   height: 100vh;
   background-color: #fff;
   transition: left 1s ease;
-  z-index: 2;
+  z-index: 5;
 
   &.on {
     left: 0;
@@ -295,4 +411,9 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width: $tablet) {
+}
+@media screen and (max-width: $mobile) {
 }

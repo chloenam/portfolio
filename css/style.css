@@ -62,17 +62,34 @@ select {
           font: 500 38px/1 "Exo", sans-serif;
           text-transform: uppercase; }
         .main .inner .content .box .item {
+          position: relative;
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
           padding: 15px;
           margin-bottom: 20px;
           cursor: pointer;
-          transition: 0.35s; }
+          transition: 0.35s;
+          overflow: hidden; }
+          .main .inner .content .box .item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(100%);
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            opacity: 0;
+            transition: 0.35s;
+            z-index: 1; }
           .main .inner .content .box .item .itemTit {
+            position: relative;
             font: bold 14px/1.4 "Spoqa Han Sans Neo", sans-serif;
             color: #fff;
-            text-transform: uppercase; }
+            text-transform: uppercase;
+            z-index: 2; }
           .main .inner .content .box .item .arrow {
             position: relative;
             display: block;
@@ -81,7 +98,8 @@ select {
             background-color: #fff;
             text-indent: -99999px;
             font-size: 0;
-            margin-bottom: 10px; }
+            margin-bottom: 10px;
+            z-index: 2; }
             .main .inner .content .box .item .arrow::before {
               content: '';
               position: absolute;
@@ -106,6 +124,9 @@ select {
               transform: rotate(-45deg); }
           .main .inner .content .box .item:hover {
             box-shadow: 5px 5px 15px rgba(156, 156, 156, 0.5); }
+            .main .inner .content .box .item:hover::after {
+              transform: translateY(0);
+              opacity: 1; }
           .main .inner .content .box .item:nth-last-child(2) {
             margin-bottom: 0; }
         .main .inner .content .box .subPage {
@@ -117,7 +138,7 @@ select {
           padding: 30px;
           background-color: #e8e8e8;
           transition: left 1s ease;
-          z-index: 3; }
+          z-index: 6; }
           .main .inner .content .box .subPage.on {
             left: 0; }
           .main .inner .content .box .subPage .bgCircle {
@@ -137,77 +158,6 @@ select {
             .main .inner .content .box .subPage .inner .subIntro a {
               font: bold 2vw/1.5 "Spoqa Han Sans Neo", sans-serif;
               color: #222; }
-            .main .inner .content .box .subPage .inner .project {
-              display: flex;
-              justify-content: center;
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%);
-              width: 75vw; }
-              .main .inner .content .box .subPage .inner .project .left {
-                margin-right: 4vw; }
-                .main .inner .content .box .subPage .inner .project .left .title {
-                  display: block;
-                  font: 500 italic 4.5vw/1 "Poppins", sans-serif;
-                  margin-bottom: 5vh;
-                  text-align: right; }
-                .main .inner .content .box .subPage .inner .project .left .projectPic {
-                  width: 600px;
-                  height: 300px;
-                  border: 1px solid #000; }
-              .main .inner .content .box .subPage .inner .project .right .subTxt .workDesc {
-                font: 400 1vw/1.6 "Spoqa Han Sans Neo", sans-serif;
-                color: #222;
-                margin: 10px 0 30px; }
-              .main .inner .content .box .subPage .inner .project .right .subTxt .arrow {
-                position: relative;
-                display: block;
-                width: 180px;
-                height: 2px;
-                background-color: #222;
-                text-indent: -99999px;
-                font-size: 0;
-                margin-bottom: 30px; }
-                .main .inner .content .box .subPage .inner .project .right .subTxt .arrow::before {
-                  content: '';
-                  position: absolute;
-                  right: 0;
-                  top: 0;
-                  display: block;
-                  width: 12px;
-                  height: inherit;
-                  background-color: inherit;
-                  transform-origin: right center;
-                  transform: rotate(45deg); }
-                .main .inner .content .box .subPage .inner .project .right .subTxt .arrow::after {
-                  content: '';
-                  position: absolute;
-                  right: 0;
-                  top: 0;
-                  display: block;
-                  width: 12px;
-                  height: inherit;
-                  background-color: inherit;
-                  transform-origin: right center;
-                  transform: rotate(-45deg); }
-              .main .inner .content .box .subPage .inner .project .right .subTxt .hashTag {
-                font: 400 1.2vw/1.4 "Poppins", sans-serif; }
-              .main .inner .content .box .subPage .inner .project .btns {
-                margin-top: 70px; }
-                .main .inner .content .box .subPage .inner .project .btns .btn {
-                  margin-bottom: 20px; }
-                  .main .inner .content .box .subPage .inner .project .btns .btn a {
-                    display: block;
-                    width: 100px;
-                    height: 50px;
-                    font: 500 1.2vw/50px "Poppins", sans-serif;
-                    color: #222;
-                    text-transform: capitalize;
-                    transition: 0.35s; }
-                    .main .inner .content .box .subPage .inner .project .btns .btn a:hover {
-                      font-weight: bold;
-                      transform: scale(1.1); }
             .main .inner .content .box .subPage .inner .prev {
               position: absolute;
               right: 0;
@@ -260,6 +210,161 @@ select {
           width: 100%;
           height: 15vh;
           background-color: #dfbf32; }
+        .main .inner .content .box.work .subPage .project {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 75vw; }
+          .main .inner .content .box.work .subPage .project .left {
+            margin-right: 4vw; }
+            .main .inner .content .box.work .subPage .project .left .title {
+              display: block;
+              font: 500 italic 4.5vw/1 "Poppins", sans-serif;
+              margin-bottom: 5vh;
+              text-align: right; }
+            .main .inner .content .box.work .subPage .project .left .projectPic {
+              width: 600px;
+              height: 300px; }
+              .main .inner .content .box.work .subPage .project .left .projectPic img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain; }
+          .main .inner .content .box.work .subPage .project .right .subTxt .workDesc {
+            font: 400 1vw/1.6 "Spoqa Han Sans Neo", sans-serif;
+            color: #222;
+            margin: 10px 0 30px; }
+          .main .inner .content .box.work .subPage .project .right .subTxt .arrow {
+            position: relative;
+            display: block;
+            width: 180px;
+            height: 2px;
+            background-color: #222;
+            text-indent: -99999px;
+            font-size: 0;
+            margin-bottom: 30px; }
+            .main .inner .content .box.work .subPage .project .right .subTxt .arrow::before {
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 0;
+              display: block;
+              width: 12px;
+              height: inherit;
+              background-color: inherit;
+              transform-origin: right center;
+              transform: rotate(45deg); }
+            .main .inner .content .box.work .subPage .project .right .subTxt .arrow::after {
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 0;
+              display: block;
+              width: 12px;
+              height: inherit;
+              background-color: inherit;
+              transform-origin: right center;
+              transform: rotate(-45deg); }
+          .main .inner .content .box.work .subPage .project .right .subTxt .hashTag {
+            font: 400 1.2vw/1.4 "Poppins", sans-serif; }
+          .main .inner .content .box.work .subPage .project .projectBox {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            margin-top: 50px; }
+            .main .inner .content .box.work .subPage .project .projectBox .toyItem {
+              width: 30%;
+              height: 35vh;
+              background-color: #e8e8e8; }
+              .main .inner .content .box.work .subPage .project .projectBox .toyItem a {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+                overflow: hidden; }
+                .main .inner .content .box.work .subPage .project .projectBox .toyItem a:hover .txt {
+                  transform: translateY(0);
+                  opacity: 1; }
+                .main .inner .content .box.work .subPage .project .projectBox .toyItem a .thumb {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover; }
+                .main .inner .content .box.work .subPage .project .projectBox .toyItem a .txt {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-content: center;
+                  flex-wrap: wrap;
+                  width: 100%;
+                  height: 100%;
+                  background-color: rgba(0, 0, 0, 0.5);
+                  text-align: center;
+                  transform: translateY(-100%);
+                  opacity: 0;
+                  transition: 0.5s; }
+                  .main .inner .content .box.work .subPage .project .projectBox .toyItem a .txt h4 {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    font: bold 30px/1 "Poppins", sans-serif;
+                    color: #dfbf32; }
+                  .main .inner .content .box.work .subPage .project .projectBox .toyItem a .txt span {
+                    font: bold 16px/1 "Poppins", sans-serif;
+                    color: #fff;
+                    text-transform: uppercase; }
+          .main .inner .content .box.work .subPage .project .btns {
+            margin-top: 70px; }
+            .main .inner .content .box.work .subPage .project .btns .btn {
+              margin-bottom: 20px; }
+              .main .inner .content .box.work .subPage .project .btns .btn:hover span {
+                transform: translateX(200%);
+                opacity: 1; }
+              .main .inner .content .box.work .subPage .project .btns .btn a {
+                display: block;
+                width: 100px;
+                height: 50px;
+                font: 500 1.2vw/50px "Poppins", sans-serif;
+                color: #222;
+                text-transform: capitalize;
+                transition: 0.35s; }
+              .main .inner .content .box.work .subPage .project .btns .btn span {
+                position: relative;
+                display: block;
+                width: 50px;
+                height: 2px;
+                background-color: #222;
+                text-indent: -99999px;
+                font-size: 0;
+                margin-top: -25px;
+                opacity: 0;
+                transition: 0.5s; }
+                .main .inner .content .box.work .subPage .project .btns .btn span::before {
+                  content: '';
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  display: block;
+                  width: 12px;
+                  height: inherit;
+                  background-color: inherit;
+                  transform-origin: right center;
+                  transform: rotate(45deg); }
+                .main .inner .content .box.work .subPage .project .btns .btn span::after {
+                  content: '';
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  display: block;
+                  width: 12px;
+                  height: inherit;
+                  background-color: inherit;
+                  transform-origin: right center;
+                  transform: rotate(-45deg); }
 
 .mask {
   position: fixed;
@@ -269,7 +374,7 @@ select {
   height: 100vh;
   background-color: #fff;
   transition: left 1s ease;
-  z-index: 2; }
+  z-index: 5; }
   .mask.on {
     left: 0; }
 
