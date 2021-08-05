@@ -8,8 +8,10 @@
   <title>PortFolio</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <!-- <script defer src="js/main.js"></script> -->
   <script defer src="js/mainQ.js"></script>
+  <script defer src="js/email.js"></script>
 </head>
 
 <body>
@@ -58,7 +60,42 @@
             <div class="arrow"></div>
           </div>
           <div class="subPage">
-            <a href="#" class="prev">뒤로가기</a>
+            <div class="bgCircle"></div>
+            <div class="inner">
+              <h3 class="subIntro">
+                <a href="index.html">
+                  안녕하세요<br>
+                  웹 퍼블리셔<br>
+                  남현주입니다.
+                </a>
+              </h3>
+              <div class="contactBox">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                  <input type="hidden" name="contact_number">
+                  <section>
+                    <article>
+                      <label for="name">Name</label>
+                      <input type="text" required placeholder="이름을 입력하세요" id="name" name="to_name">
+                    </article>
+                    <article>
+                      <label for="num">Contact Number</label>
+                      <input type="text" required placeholder="연락처를 입력하세요" id="num" name="contact">
+                    </article>
+                    <article>
+                      <label for="email">E-Mail</label>
+                      <input type="email" required placeholder="이메일을 입력하세요" id="email" name="from_name">
+                    </article>
+                    <article>
+                      <label for="message">Contact Message</label>
+                      <textarea required placeholder="문의내용을 입력하세요*" id="message" name="message_html"></textarea>
+                    </article>
+                  </section>
+                  <input type="submit" value="SEND">
+                </form>
+              </div>
+              <a href="#" class="prev">PREV</a>
+            </div>
           </div>
         </article>
         <article class="work box">
@@ -110,7 +147,6 @@
                   </ul>
                 </div>
               </div>
-
               <a href="#" class="prev">PREV</a>
             </div>
           </div>
