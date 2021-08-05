@@ -40,7 +40,8 @@
           text-transform: uppercase;
         }
 
-        .item {
+        .item,
+        .down {
           position: relative;
           display: flex;
           justify-content: space-between;
@@ -115,6 +116,13 @@
 
           &.on {
             left: 0;
+
+            .inner {
+              .prev {
+                transition-delay: 1s;
+                transform: translateX(0);
+              }
+            }
           }
 
           .bgCircle {
@@ -140,9 +148,24 @@
               }
             }
 
-            .prev {
+            .project {
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
               position: absolute;
-              right: 0;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 75vw;
+
+              .left {
+                margin-right: 4vw;
+              }
+            }
+
+            .prev {
+              position: fixed;
+              right: 30px;
               top: 50%;
               width: 100px;
               height: 100px;
@@ -152,7 +175,8 @@
               font: 400 1vw/100px $fontE;
               text-align: center;
               color: $white;
-              transition: 0.35s;
+              transform: translateX(150%);
+              transition: animation 0.35s, transform 1s;
 
               &:hover {
                 animation: circle 1.5s linear infinite;
@@ -193,15 +217,73 @@
         }
 
         &.about {
-          .item {
+          .item,
+          .down {
             width: 100%;
             height: 25vh;
             background-color: $blue;
           }
 
+          .down {
+            .arrow {
+              transform: rotate(90deg);
+              width: 24px;
+            }
+          }
+
           .subPage {
             .bgCircle {
-              background-color: $blue;
+              background-color: #6983df;
+            }
+
+            &.stack {
+              .inner {
+                .project {
+                  flex-wrap: nowrap;
+
+                  .left {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+
+                    h4 {
+                      font: bold 35px/1.4 $fontS;
+                      color: $dark_black;
+                      span {
+                        display: block;
+                        margin-bottom: 20px;
+                        color: $blue;
+                      }
+                    }
+                  }
+                  .right {
+                    width: 50%;
+
+                    .stackList {
+                      width: 100%;
+
+                      .point {
+                        margin-bottom: 50px;
+
+                        &:last-child {
+                          margin-bottom: 0;
+                        }
+                        .pointTit {
+                          margin-bottom: 20px;
+                          font: bold 20px/1 $fontP;
+                          color: #000;
+                        }
+                        .pointDesc {
+                          font: 500 16px/1.6 $fontS;
+                          color: #111;
+                          word-break: keep-all;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -316,18 +398,7 @@
             }
 
             .project {
-              display: flex;
-              justify-content: center;
-              flex-wrap: wrap;
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%);
-              width: 75vw;
-
               .left {
-                margin-right: 4vw;
-
                 .title {
                   display: block;
                   font: 500 italic 4.5vw/1 $fontP;
@@ -549,10 +620,10 @@
               }
 
               .prev {
-                position: absolute;
-                right: 0;
+                position: fixed;
+                right: 30px;
                 top: auto;
-                bottom: 0;
+                bottom: 30px;
                 width: 70px;
                 height: 70px;
                 line-height: 70px;
@@ -584,6 +655,50 @@
           &.about {
             .item {
               width: 48%;
+            }
+
+            .subPage {
+              overflow: scroll;
+              &.stack {
+                height: 100%;
+                .inner {
+                  .project {
+                    top: 0;
+                    transform: translateX(-50%);
+                    flex-wrap: wrap;
+                    width: 90vw;
+
+                    .left {
+                      width: 100%;
+                      text-align: right;
+                      margin-bottom: 40px;
+
+                      h4 {
+                        width: 100%;
+                        font-size: 30px;
+                      }
+                    }
+                    .right {
+                      width: 100%;
+                      margin-bottom: 80px;
+
+                      .stackList {
+                        .point {
+                          margin-bottom: 30px;
+
+                          .pointTit {
+                            margin-bottom: 20px;
+                            font-size: 18px;
+                          }
+                          .pointDesc {
+                            font-size: 14px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
 
@@ -757,6 +872,25 @@
             .item {
               width: 100%;
               height: 15vh;
+            }
+
+            .subPage {
+              &.stack {
+                .inner {
+                  .project {
+                    top: 20vh;
+                    width: 85vw;
+                    .left {
+                      h4 {
+                        font-size: 25px;
+                      }
+                    }
+                    .right {
+                      margin-bottom: 100px;
+                    }
+                  }
+                }
+              }
             }
           }
 
