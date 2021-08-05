@@ -538,7 +538,8 @@ select {
             font-size: 14px; }
           .main .inner .content .box.intro .guide_txt {
             width: 30%; }
-        .main .inner .content .box.about .item {
+        .main .inner .content .box.about .item,
+        .main .inner .content .box.about .down {
           width: 48%; }
         .main .inner .content .box.about .subPage {
           overflow: scroll; }
@@ -645,7 +646,8 @@ select {
       width: 90%; }
     .main .inner .content .box.intro .guide_txt {
       width: 100%; }
-  .main .inner .content .box.about .item {
+  .main .inner .content .box.about .item,
+  .main .inner .content .box.about .down {
     width: 100%;
     height: 15vh; }
   .main .inner .content .box.about .subPage.stack .inner .project {

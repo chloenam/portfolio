@@ -653,7 +653,8 @@
           }
 
           &.about {
-            .item {
+            .item,
+            .down {
               width: 48%;
             }
 
@@ -869,7 +870,8 @@
           }
 
           &.about {
-            .item {
+            .item,
+            .down {
               width: 100%;
               height: 15vh;
             }
