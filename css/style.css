@@ -148,7 +148,6 @@ select {
             transform: translateY(-50%);
             width: 40vw;
             height: 40vw;
-            background-color: #dfbf32;
             border-radius: 50%;
             filter: blur(20px); }
           .main .inner .content .box .subPage .inner {
@@ -200,15 +199,78 @@ select {
           width: 100%;
           height: 25vh;
           background-color: #5169bf; }
+        .main .inner .content .box.about .subPage .bgCircle {
+          background-color: #5169bf; }
         .main .inner .content .box.contact {
           height: 100%; }
           .main .inner .content .box.contact .item {
             width: 100%;
             height: 45vh;
             background-color: #3e715c; }
+          .main .inner .content .box.contact .subPage .bgCircle {
+            background-color: #3e715c; }
+          .main .inner .content .box.contact .subPage .contactBox {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 70vw; }
+            .main .inner .content .box.contact .subPage .contactBox h2 {
+              font: 500 italic 4.5vw/1 "Poppins", sans-serif;
+              margin-bottom: 5vh;
+              text-align: center; }
+            .main .inner .content .box.contact .subPage .contactBox #contactForm {
+              width: 60%;
+              margin: 0 auto; }
+              .main .inner .content .box.contact .subPage .contactBox #contactForm section {
+                width: 100%;
+                margin-bottom: 50px; }
+                .main .inner .content .box.contact .subPage .contactBox #contactForm section article {
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: baseline;
+                  width: 100%;
+                  margin-bottom: 3vh; }
+                  .main .inner .content .box.contact .subPage .contactBox #contactForm section article label {
+                    width: 40%;
+                    font: 600 1vw/1 "Poppins", sans-serif;
+                    color: #222; }
+                  .main .inner .content .box.contact .subPage .contactBox #contactForm section article input {
+                    width: 50%;
+                    padding: 10px 15px;
+                    border-radius: 0;
+                    border: 1px solid #000;
+                    font: 400 0.9vw/1 "Spoqa Han Sans Neo", sans-serif; }
+                    .main .inner .content .box.contact .subPage .contactBox #contactForm section article input:focus {
+                      outline: none; }
+                  .main .inner .content .box.contact .subPage .contactBox #contactForm section article textarea {
+                    width: 50%;
+                    height: 100px;
+                    padding: 10px 15px;
+                    border-radius: 0;
+                    border: 1px solid #000;
+                    font: 400 0.9vw/1.2 "Spoqa Han Sans Neo", sans-serif;
+                    resize: none; }
+                    .main .inner .content .box.contact .subPage .contactBox #contactForm section article textarea:focus {
+                      outline: none; }
+              .main .inner .content .box.contact .subPage .contactBox #contactForm input[type='submit'] {
+                display: block;
+                padding: 10px 40px;
+                margin: 0 auto;
+                background-color: transparent;
+                border: 1px solid #222;
+                font: bold 20px/1 "Poppins", sans-serif;
+                cursor: pointer;
+                transition: 0.35s; }
+                .main .inner .content .box.contact .subPage .contactBox #contactForm input[type='submit']:hover {
+                  background-color: #3e715c;
+                  border-color: #3e715c;
+                  color: #fff; }
         .main .inner .content .box.work .item {
           width: 100%;
           height: 15vh;
+          background-color: #dfbf32; }
+        .main .inner .content .box.work .subPage .bgCircle {
           background-color: #dfbf32; }
         .main .inner .content .box.work .subPage .project {
           display: flex;
@@ -434,6 +496,21 @@ select {
         .main .inner .content .box.contact .item {
           width: 100%;
           height: 25vh; }
+        .main .inner .content .box.contact .subPage .contactBox {
+          width: 90vw; }
+          .main .inner .content .box.contact .subPage .contactBox h2 {
+            font-size: 40px; }
+          .main .inner .content .box.contact .subPage .contactBox #contactForm {
+            width: 80%; }
+            .main .inner .content .box.contact .subPage .contactBox #contactForm section {
+              width: 100%; }
+              .main .inner .content .box.contact .subPage .contactBox #contactForm section article label {
+                width: 40%;
+                font-size: 16px; }
+              .main .inner .content .box.contact .subPage .contactBox #contactForm section article input {
+                font-size: 14px; }
+              .main .inner .content .box.contact .subPage .contactBox #contactForm section article textarea {
+                font-size: 14px; }
         .main .inner .content .box.work .item {
           width: 48%; }
         .main .inner .content .box.work .subPage .project {
@@ -501,6 +578,22 @@ select {
   .main .inner .content .box.contact .item {
     width: 100%;
     height: 15vh; }
+  .main .inner .content .box.contact .subPage .contactBox {
+    width: 90vw; }
+    .main .inner .content .box.contact .subPage .contactBox h2 {
+      margin-top: 30px; }
+    .main .inner .content .box.contact .subPage .contactBox #contactForm section {
+      width: 100%;
+      margin-bottom: 30px; }
+      .main .inner .content .box.contact .subPage .contactBox #contactForm section article {
+        flex-direction: column; }
+        .main .inner .content .box.contact .subPage .contactBox #contactForm section article label {
+          width: 100%;
+          margin-bottom: 10px; }
+        .main .inner .content .box.contact .subPage .contactBox #contactForm section article input {
+          width: 100%; }
+        .main .inner .content .box.contact .subPage .contactBox #contactForm section article textarea {
+          width: 100%; }
   .main .inner .content .box.work .item {
     width: 100%; }
   .main .inner .content .box.work .subPage .project {
