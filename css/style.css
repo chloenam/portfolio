@@ -188,10 +188,10 @@ select {
               height: 100px;
               margin-top: -50px;
               border-radius: 50%;
-              background-color: #b7b7b7;
-              font: 400 1vw/100px "Exo", sans-serif;
+              border: 1px solid #222;
+              font: 700 1vw/100px "Exo", sans-serif;
               text-align: center;
-              color: #fff;
+              color: #222;
               transform: translateX(150%);
               transition: animation 0.35s, transform 1s; }
               .main .inner .content .box .subPage .inner .prev:hover {
@@ -595,9 +595,10 @@ select {
             width: 30%;
             margin-top: 10px; }
             .main .inner .content .box.work .subPage .project .btns .btn a {
-              font-size: 16px; }
-            .main .inner .content .box.work .subPage .project .btns .btn:hover span {
-              transform: translateX(120%); } }
+              font-size: 12px; }
+              .main .inner .content .box.work .subPage .project .btns .btn a:hover {
+                color: #dfbf32;
+                border-bottom-color: #dfbf32; } }
 @media screen and (max-width: 539px) {
   .main .inner .content .box .subPage {
     left: 180%; }
@@ -677,13 +678,6 @@ select {
       display: flex;
       justify-content: space-around;
       width: 100%;
-      margin-top: 20px; }
-      .main .inner .content .box.work .subPage .project .btns .btn a {
-        text-align: center;
-        border-right: 1px solid #b7b7b7; }
-      .main .inner .content .box.work .subPage .project .btns .btn:last-child a {
-        border-right: none; }
-      .main .inner .content .box.work .subPage .project .btns .btn:hover span {
-        opacity: 0; } }
+      margin-top: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -171,10 +171,10 @@
               height: 100px;
               margin-top: -50px;
               border-radius: 50%;
-              background-color: $dark_gray;
-              font: 400 1vw/100px $fontE;
+              border: 1px solid $dark_black;
+              font: 700 1vw/100px $fontE;
               text-align: center;
-              color: $white;
+              color: $dark_black;
               transform: translateX(150%);
               transition: animation 0.35s, transform 1s;
 
@@ -803,12 +803,11 @@
 
                   .btn {
                     a {
-                      font-size: 16px;
-                    }
+                      font-size: 12px;
 
-                    &:hover {
-                      span {
-                        transform: translateX(120%);
+                      &:hover {
+                        color: $yellow;
+                        border-bottom-color: $yellow;
                       }
                     }
                   }
@@ -983,24 +982,6 @@
                   justify-content: space-around;
                   width: 100%;
                   margin-top: 20px;
-
-                  .btn {
-                    a {
-                      text-align: center;
-                      border-right: 1px solid $dark_gray;
-                    }
-
-                    &:last-child {
-                      a {
-                        border-right: none;
-                      }
-                    }
-                    &:hover {
-                      span {
-                        opacity: 0;
-                      }
-                    }
-                  }
                 }
               }
             }
