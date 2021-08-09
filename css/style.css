@@ -429,51 +429,20 @@ select {
         .main .inner .content .box.work .subPage .project .btns {
           margin-top: 70px; }
           .main .inner .content .box.work .subPage .project .btns .btn {
-            margin-bottom: 20px; }
-            .main .inner .content .box.work .subPage .project .btns .btn:hover span {
-              transform: translateX(200%);
-              opacity: 1; }
+            margin-bottom: 20px;
+            overflow: hidden; }
             .main .inner .content .box.work .subPage .project .btns .btn a {
-              display: block;
-              width: 100px;
-              height: 50px;
-              font: 500 1.2vw/50px "Poppins", sans-serif;
+              position: relative;
+              display: inline-block;
+              padding: 10px 5px;
+              font: 500 14px/1 "Spoqa Han Sans Neo", sans-serif;
               color: #222;
+              border-bottom: 1px solid #000;
               text-transform: capitalize;
               transition: 0.35s; }
-            .main .inner .content .box.work .subPage .project .btns .btn span {
-              position: relative;
-              display: block;
-              width: 50px;
-              height: 2px;
-              background-color: #222;
-              text-indent: -99999px;
-              font-size: 0;
-              margin-top: -25px;
-              opacity: 0;
-              transition: 0.5s; }
-              .main .inner .content .box.work .subPage .project .btns .btn span::before {
-                content: '';
-                position: absolute;
-                right: 0;
-                top: 0;
-                display: block;
-                width: 12px;
-                height: inherit;
-                background-color: inherit;
-                transform-origin: right center;
-                transform: rotate(45deg); }
-              .main .inner .content .box.work .subPage .project .btns .btn span::after {
-                content: '';
-                position: absolute;
-                right: 0;
-                top: 0;
-                display: block;
-                width: 12px;
-                height: inherit;
-                background-color: inherit;
-                transform-origin: right center;
-                transform: rotate(-45deg); }
+              .main .inner .content .box.work .subPage .project .btns .btn a:hover {
+                color: #fff;
+                border-bottom-color: #fff; }
 
 .mask {
   position: fixed;

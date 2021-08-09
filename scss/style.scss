@@ -512,38 +512,24 @@
 
               .btns {
                 margin-top: 70px;
+
                 .btn {
                   margin-bottom: 20px;
-
-                  &:hover {
-                    span {
-                      transform: translateX(200%);
-                      opacity: 1;
-                    }
-                  }
+                  overflow: hidden;
 
                   a {
-                    display: block;
-                    width: 100px;
-                    height: 50px;
-                    font: 500 1.2vw/50px $fontP;
+                    position: relative;
+                    display: inline-block;
+                    padding: 10px 5px;
+                    font: 500 14px/1 $fontS;
                     color: $dark_black;
+                    border-bottom: 1px solid #000;
                     text-transform: capitalize;
                     transition: 0.35s;
-                  }
 
-                  span {
-                    @include arrow_bar(50px, $dark_black);
-                    margin-top: -25px;
-                    opacity: 0;
-                    transition: 0.5s;
-
-                    &::before {
-                      @include arrow_a_top;
-                    }
-
-                    &::after {
-                      @include arrow_a_bottom;
+                    &:hover {
+                      color: $white;
+                      border-bottom-color: $white;
                     }
                   }
                 }
