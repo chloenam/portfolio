@@ -1,36 +1,27 @@
-const main = document.querySelectorAll('.main')
-const box = document.querySelectorAll('.box')
-const item = document.querySelectorAll('.item')
-const mask = document.querySelector('.mask')
-const sub = document.querySelectorAll('.subPage')
-const subPrev = document.querySelector('.prev')
+const main = $('.main')
+const box = $('.box')
+const item = $('.item')
+const mask = $('.mask')
+const sub = $('.subPage')
+const prevBtn = $('.prev')
 
-console.log(sub)
+item.on('click', function () {
+  const color = $(this).css('backgroundColor')
+  console.log(color)
+  const target = $(this).next()
 
-for (let i = 0; i < item.length; i++) {
-  let color = window.getComputedStyle(item[i]).backgroundColor
-  let subPage = item[i].nextElementSibling
-  console.log(subPage)
+  mask.css('backgroundColor', color)
+  mask.addClass('on')
 
-  item[i].addEventListener('click', (e) => {
-    e.preventDefault()
+  setTimeout(function () {
+    target.addClass('on')
+  }, 500)
+})
 
-    mask.style.backgroundColor = color
+prevBtn.on('click', function () {
+  sub.removeClass('on')
 
-    mask.classList.add('on')
-
-    setTimeout(() => {
-      subPage.classList.add('on')
-    }, 500)
-  })
-}
-
-subPrev.addEventListener('click', (e) => {
-  e.preventDefault()
-
-  sub.classList.remove('on')
-
-  setTimeout(() => {
-    mask.classList.remove('on')
+  setTimeout(function () {
+    mask.removeClass('on')
   }, 500)
 })
