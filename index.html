@@ -1,388 +1,462 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PortFolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/59467ea45a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <!-- <script defer src="js/main.js"></script> -->
+    <script defer src="js/main.js"></script>
+    <script defer src="js/email.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PortFolio</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://kit.fontawesome.com/59467ea45a.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <!-- <script defer src="js/main.js"></script> -->
-  <script defer src="js/main.js"></script>
-  <script defer src="js/email.js"></script>
-</head>
-
-<body>
-  <div class="mask"></div>
-  <main class="main">
-    <div class="inner">
-      <section class="content">
-        <article class="intro box">
-          <h1 class="intro_tit">
-            안녕하세요<br>
-            웹 퍼블리셔<br>
-            남현주입니다.
-          </h1>
-          <p class="intro_desc">
-            디자이너의 의견을 존중하며 시안과 동일한
-            디자인을 만들도록 노력하는 웹 퍼블리셔입니다.
-            더 나아가 많은 기술을 접하고 배우는 것을 목표로 하고있습니다.
-          </p>
-          <p class="guide_txt">
-            본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다. 사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝혀 드립니다.
-          </p>
-        </article>
-        <article class="about box">
-          <h2 class="title">about</h2>
-          <a class="down" href="assets/pdf/resume.pdf" download="웹퍼블리셔_남현주.pdf">
-            <h4 class="itemTit">
-              이력서 다운로드
-            </h4>
-            <div class="arrow"></div>
-          </a>
-          <div class="item">
-            <h4 class="itemTit">
-              기술
-            </h4>
-            <div class="arrow"></div>
-          </div>
-          <div class="subPage stack">
-            <div class="bgCircle"></div>
-            <div class="inner">
-              <h3 class="subIntro">
-                <a href="index.html">
-                  안녕하세요<br>
-                  웹 퍼블리셔<br>
-                  남현주입니다.
-                </a>
-              </h3>
-              <div class="project">
-                <div class="left">
-                  <h4>
-                    <span>#Publishing<br>#Basic <br>#Collaborate</span>
-                    열심히 공부하였습니다.
-                  </h4>
-                </div>
-                <div class="right">
-                  <ul class="stackList">
-                    <li class="point">
-                      <h5 class="pointTit">
-                        <i class="fas fa-check"></i>
-                        Figma + Adobe XD
-                      </h5>
-                      <p class="pointDesc">
-                        최소한의 디자인과 기술설명서, 작업설명서와 같은 문서 작성이 가능합니다.
-                      </p>
-                    </li>
-                    <li class="point">
-                      <h5 class="pointTit">
-                        <i class="fas fa-check"></i>
-                        HTML + CSS + SCSS
-                      </h5>
-                      <p class="pointDesc">
-                        웹 표준과 접근성을 준수하여 시멘틱 태그로 상황에 맞는 코드를 작성하기위해 노력합니다.
-                        CSS Preprocessor인 SCSS를 사용가능하며 심화부분은 앞으로 더 공부 예정입니다.
-                        Media Query를 사용하여 반응형 레이아웃을 제작할 수 있습니다.
-                      </p>
-                    </li>
-                    <li class="point">
-                      <h5 class="pointTit">
-                        <i class="fas fa-check"></i>
-                        Javascript + jQuery
-                      </h5>
-                      <p class="pointDesc">
-                        jQuery를 통해 프로그래밍적 사고를 할 수있도록 기본기를 다지고 심화 코드들을 이해할 수 있도록 공부하였으며
-                        앞으로 업무에 필요한 ECMA6 문법도 익숙하게 사용할 수 있도록 공부 예정이며 프론트엔드 기술들도 관심이있어 배울 의향이 있습니다.
-                      </p>
-                    </li>
-                    <li class="point">
-                      <h5 class="pointTit">
-                        <i class="fas fa-check"></i>
-                        Co-work
-                      </h5>
-                      <p class="pointDesc">
-                        함께 혐업하게 될 분들과 원활한 커뮤니케이션을 위해 다른 분야의 지식도 배우고 같이 공유하여 좋은 결과물을 만들어내기위해 노력하겠습니다.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <a href="#" class="prev">PREV</a>
+  <body>
+    <div class="mask"></div>
+    <main class="main">
+      <div class="inner">
+        <section class="content">
+          <article class="intro box">
+            <h1 class="intro_tit">
+              안녕하세요<br />
+              웹 퍼블리셔<br />
+              남현주입니다.
+            </h1>
+            <p class="intro_desc">
+              디자이너의 의견을 존중하며 시안과 동일한 디자인을 만들도록
+              노력하는 웹 퍼블리셔입니다. 더 나아가 많은 기술을 접하고 배우는
+              것을 목표로 하고있습니다.
+            </p>
+            <p class="guide_txt">
+              본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이
+              아닙니다. 사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을
+              밝혀 드립니다.
+            </p>
+          </article>
+          <article class="about box">
+            <h2 class="title">about</h2>
+            <a
+              class="down"
+              href="assets/pdf/resume.pdf"
+              download="웹퍼블리셔_남현주.pdf"
+            >
+              <h4 class="itemTit">이력서 다운로드</h4>
+              <div class="arrow"></div>
+            </a>
+            <div class="item">
+              <h4 class="itemTit">기술</h4>
+              <div class="arrow"></div>
             </div>
-          </div>
-        </article>
-        <article class="contact box">
-          <h2 class="title">contact</h2>
-          <div class="item">
-            <h4 class="itemTit">
-              컨택하기
-            </h4>
-            <div class="arrow"></div>
-          </div>
-          <div class="subPage">
-            <div class="bgCircle"></div>
-            <div class="inner">
-              <h3 class="subIntro">
-                <a href="index.html">
-                  안녕하세요<br>
-                  웹 퍼블리셔<br>
-                  남현주입니다.
-                </a>
-              </h3>
-              <div class="contactBox">
-                <h2>Contact Us</h2>
-                <form id="contactForm">
-                  <input type="hidden" name="contact_number">
-                  <section>
-                    <article>
-                      <label for="name">Name</label>
-                      <input type="text" required placeholder="이름을 입력하세요" id="name" name="to_name">
-                    </article>
-                    <article>
-                      <label for="num">Contact Number</label>
-                      <input type="text" required placeholder="연락처를 입력하세요" id="num" name="contact">
-                    </article>
-                    <article>
-                      <label for="email">E-Mail</label>
-                      <input type="email" required placeholder="이메일을 입력하세요" id="email" name="from_name">
-                    </article>
-                    <article>
-                      <label for="message">Contact Message</label>
-                      <textarea required placeholder="문의내용을 입력하세요*" id="message" name="message_html"></textarea>
-                    </article>
-                  </section>
-                  <input type="submit" value="SEND">
-                </form>
+            <div class="subPage stack">
+              <div class="bgCircle"></div>
+              <div class="inner">
+                <h3 class="subIntro">
+                  <a href="index.html">
+                    안녕하세요<br />
+                    웹 퍼블리셔<br />
+                    남현주입니다.
+                  </a>
+                </h3>
+                <div class="project">
+                  <div class="left">
+                    <h4>
+                      <span>#Publishing<br />#Basic <br />#Collaborate</span>
+                      열심히 공부하였습니다.
+                    </h4>
+                  </div>
+                  <div class="right">
+                    <ul class="stackList">
+                      <li class="point">
+                        <h5 class="pointTit">
+                          <i class="fas fa-check"></i>
+                          Figma + Adobe XD
+                        </h5>
+                        <p class="pointDesc">
+                          최소한의 디자인과 기술설명서, 작업설명서와 같은 문서
+                          작성이 가능합니다.
+                        </p>
+                      </li>
+                      <li class="point">
+                        <h5 class="pointTit">
+                          <i class="fas fa-check"></i>
+                          HTML + CSS + SCSS
+                        </h5>
+                        <p class="pointDesc">
+                          웹 표준과 접근성을 준수하여 시멘틱 태그로 상황에 맞는
+                          코드를 작성하기위해 노력합니다. CSS Preprocessor인
+                          SCSS를 사용가능하며 심화부분은 앞으로 더 공부
+                          예정입니다. Media Query를 사용하여 반응형 레이아웃을
+                          제작할 수 있습니다.
+                        </p>
+                      </li>
+                      <li class="point">
+                        <h5 class="pointTit">
+                          <i class="fas fa-check"></i>
+                          Javascript + jQuery
+                        </h5>
+                        <p class="pointDesc">
+                          jQuery를 통해 프로그래밍적 사고를 할 수있도록 기본기를
+                          다지고 심화 코드들을 이해할 수 있도록 공부하였으며
+                          앞으로 업무에 필요한 ECMA6 문법도 익숙하게 사용할 수
+                          있도록 공부 예정이며 프론트엔드 기술들도 관심이있어
+                          배울 의향이 있습니다.
+                        </p>
+                      </li>
+                      <li class="point">
+                        <h5 class="pointTit">
+                          <i class="fas fa-check"></i>
+                          Co-work
+                        </h5>
+                        <p class="pointDesc">
+                          함께 혐업하게 될 분들과 원활한 커뮤니케이션을 위해
+                          다른 분야의 지식도 배우고 같이 공유하여 좋은 결과물을
+                          만들어내기위해 노력하겠습니다.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="#" class="prev">PREV</a>
               </div>
-              <a href="#" class="prev">PREV</a>
             </div>
-          </div>
-        </article>
-        <article class="work box">
-          <h2 class="title">work</h2>
-          <div class="item">
-            <h4 class="itemTit">
-              STUDIO_H<br>
-              기업형 사이트
-            </h4>
-            <div class="arrow"></div>
-          </div>
-          <div class="subPage">
-            <div class="bgCircle"></div>
-            <div class="inner">
-              <h3 class="subIntro">
-                <a href="index.html">
-                  안녕하세요<br>
-                  웹 퍼블리셔<br>
-                  남현주입니다.
-                </a>
-              </h3>
-              <div class="project">
-                <div class="left">
-                  <strong class="title">STUDIO_H</strong>
-                  <div class="projectPic">
-                    <img src="assets/img/studio_h.png" alt="studio_h">
-                  </div>
+          </article>
+          <article class="contact box">
+            <h2 class="title">contact</h2>
+            <div class="item">
+              <h4 class="itemTit">컨택하기</h4>
+              <div class="arrow"></div>
+            </div>
+            <div class="subPage">
+              <div class="bgCircle"></div>
+              <div class="inner">
+                <h3 class="subIntro">
+                  <a href="index.html">
+                    안녕하세요<br />
+                    웹 퍼블리셔<br />
+                    남현주입니다.
+                  </a>
+                </h3>
+                <div class="contactBox">
+                  <h2>Contact Us</h2>
+                  <form id="contactForm">
+                    <input type="hidden" name="contact_number" />
+                    <section>
+                      <article>
+                        <label for="name">Name</label>
+                        <input
+                          type="text"
+                          required
+                          placeholder="이름을 입력하세요"
+                          id="name"
+                          name="to_name"
+                        />
+                      </article>
+                      <article>
+                        <label for="num">Contact Number</label>
+                        <input
+                          type="text"
+                          required
+                          placeholder="연락처를 입력하세요"
+                          id="num"
+                          name="contact"
+                        />
+                      </article>
+                      <article>
+                        <label for="email">E-Mail</label>
+                        <input
+                          type="email"
+                          required
+                          placeholder="이메일을 입력하세요"
+                          id="email"
+                          name="from_name"
+                        />
+                      </article>
+                      <article>
+                        <label for="message">Contact Message</label>
+                        <textarea
+                          required
+                          placeholder="문의내용을 입력하세요*"
+                          id="message"
+                          name="message_html"
+                        ></textarea>
+                      </article>
+                    </section>
+                    <input type="submit" value="SEND" />
+                  </form>
                 </div>
-                <div class="right">
-                  <div class="subTxt">
-                    <p class="workDesc">
-                      기업형 포트폴리오 사이트이며 다양한 api를<br>
-                      사용하여 서브페이지를 구성하였습니다.
-                    </p>
-                    <span class="arrow">arrow</span>
-                    <p class="hashTag">#PC #Tablat #Mobile #RWD #Corporate</p>
-                  </div>
-                  <ul class="btns">
-                    <li class="btn"><a href="assets/pdf/studio_h.pdf" target="_blank">작업설명서 보기</a>
-
-                    </li>
-                    <li class="btn"><a href="https://chloenam.github.io/studio_h/dist/index.html" target="_blank">사이트
-                        보러가기</a>
-
-                    </li>
-                    <li class="btn"><a href="https://github.com/chloenam/studio_h" target="_blank">깃허브 저장소 보기</a>
-
-                    </li>
-                  </ul>
-                </div>
+                <a href="#" class="prev">PREV</a>
               </div>
-              <a href="#" class="prev">PREV</a>
             </div>
-          </div>
-          <div class="item">
-            <h4 class="itemTit">
-              full screen<br>
-              swiper web site
-            </h4>
-            <div class="arrow"></div>
-          </div>
-          <div class="subPage">
-            <div class="bgCircle"></div>
-            <div class="inner">
-              <h3 class="subIntro">
-                <a href="index.html">
-                  안녕하세요<br>
-                  웹 퍼블리셔<br>
-                  남현주입니다.
-                </a>
-              </h3>
-              <div class="project">
-                <div class="left">
-                  <strong class="title">Swiper Web</strong>
-                  <div class="projectPic">
-                    <img src="assets/img/swiper.png" alt="swiper">
+          </article>
+          <article class="work box">
+            <h2 class="title">work</h2>
+            <div class="item">
+              <h4 class="itemTit">
+                STUDIO_H<br />
+                기업형 사이트
+              </h4>
+              <div class="arrow"></div>
+            </div>
+            <div class="subPage">
+              <div class="bgCircle"></div>
+              <div class="inner">
+                <h3 class="subIntro">
+                  <a href="index.html">
+                    안녕하세요<br />
+                    웹 퍼블리셔<br />
+                    남현주입니다.
+                  </a>
+                </h3>
+                <div class="project">
+                  <div class="left">
+                    <strong class="title">STUDIO_H</strong>
+                    <div class="projectPic">
+                      <img src="assets/img/studio_h.png" alt="studio_h" />
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="subTxt">
+                      <p class="workDesc">
+                        기업형 포트폴리오 사이트이며 다양한 api를<br />
+                        사용하여 서브페이지를 구성하였습니다. <br />(작업기여도
+                        100%)
+                      </p>
+                      <span class="arrow">arrow</span>
+                      <p class="hashTag">#PC #Tablat #Mobile #RWD #Corporate</p>
+                    </div>
+                    <ul class="btns">
+                      <li class="btn">
+                        <a href="assets/pdf/studio_h.pdf" target="_blank"
+                          >작업설명서 보기</a
+                        >
+                      </li>
+                      <li class="btn">
+                        <a
+                          href="https://chloenam.github.io/studio_h/dist/index.html"
+                          target="_blank"
+                          >사이트 보러가기</a
+                        >
+                      </li>
+                      <li class="btn">
+                        <a
+                          href="https://github.com/chloenam/studio_h"
+                          target="_blank"
+                          >깃허브 저장소 보기</a
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="right">
-                  <div class="subTxt">
-                    <p class="workDesc">
-                      Swiper JS를 사용하여 구현한<br>
-                      Full Screen Web site 입니다.
-                    </p>
-                    <span class="arrow">arrow</span>
-                    <p class="hashTag">#PC #Swiper #Web #PlugIn #FullScreen</p>
+                <a href="#" class="prev">PREV</a>
+              </div>
+            </div>
+            <div class="item">
+              <h4 class="itemTit">
+                full screen<br />
+                swiper web site
+              </h4>
+              <div class="arrow"></div>
+            </div>
+            <div class="subPage">
+              <div class="bgCircle"></div>
+              <div class="inner">
+                <h3 class="subIntro">
+                  <a href="index.html">
+                    안녕하세요<br />
+                    웹 퍼블리셔<br />
+                    남현주입니다.
+                  </a>
+                </h3>
+                <div class="project">
+                  <div class="left">
+                    <strong class="title">Swiper Web</strong>
+                    <div class="projectPic">
+                      <img src="assets/img/swiper.png" alt="swiper" />
+                    </div>
                   </div>
-                  <ul class="btns">
-                    <!-- <li class="btn"><a href="">작업설명서 보기</a>
+                  <div class="right">
+                    <div class="subTxt">
+                      <p class="workDesc">
+                        Swiper JS를 사용하여 구현한<br />
+                        Full Screen Web site 입니다.<br />(작업기여도 100%)
+                      </p>
+                      <span class="arrow">arrow</span>
+                      <p class="hashTag">
+                        #PC #Swiper #Web #PlugIn #FullScreen
+                      </p>
+                    </div>
+                    <ul class="btns">
+                      <!-- <li class="btn"><a href="">작업설명서 보기</a>
                       <span>arrow</span>
                     </li> -->
-                    <li class="btn"><a href="https://chloenam.github.io/swiper_pf/" target="_blank">사이트 보러가기</a>
-
-                    </li>
-                    <li class="btn"><a href="https://github.com/chloenam/swiper_pf" target="_blank">깃허브 저장소 보기</a>
-
-                    </li>
-                  </ul>
+                      <li class="btn">
+                        <a
+                          href="https://chloenam.github.io/swiper_pf/"
+                          target="_blank"
+                          >사이트 보러가기</a
+                        >
+                      </li>
+                      <li class="btn">
+                        <a
+                          href="https://github.com/chloenam/swiper_pf"
+                          target="_blank"
+                          >깃허브 저장소 보기</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
+                <a href="#" class="prev">PREV</a>
               </div>
-              <a href="#" class="prev">PREV</a>
             </div>
-          </div>
-          <div class="item">
-            <h4 class="itemTit">
-              architecture<br>
-              scroll web site(+dark)
-            </h4>
-            <div class="arrow"></div>
-          </div>
-          <div class="subPage">
-            <div class="bgCircle"></div>
-            <div class="inner">
-              <h3 class="subIntro">
-                <a href="index.html">
-                  안녕하세요<br>
-                  웹 퍼블리셔<br>
-                  남현주입니다.
-                </a>
-              </h3>
-              <div class="project">
-                <div class="left">
-                  <strong class="title">Architecture</strong>
-                  <div class="projectPic">
-                    <img src="assets/img/scroll.png" alt="scroll web site">
+            <div class="item">
+              <h4 class="itemTit">
+                architecture<br />
+                scroll web site(+dark)
+              </h4>
+              <div class="arrow"></div>
+            </div>
+            <div class="subPage">
+              <div class="bgCircle"></div>
+              <div class="inner">
+                <h3 class="subIntro">
+                  <a href="index.html">
+                    안녕하세요<br />
+                    웹 퍼블리셔<br />
+                    남현주입니다.
+                  </a>
+                </h3>
+                <div class="project">
+                  <div class="left">
+                    <strong class="title">Architecture</strong>
+                    <div class="projectPic">
+                      <img src="assets/img/scroll.png" alt="scroll web site" />
+                    </div>
                   </div>
-                </div>
-                <div class="right">
-                  <div class="subTxt">
-                    <p class="workDesc">
-                      Scroll위치값에 따라 컨텐츠가 나타나는
-                      모션을 적용했으며 <br>
-                      다크모드를 지원하는 페이지입니다.
-                    </p>
-                    <span class="arrow">arrow</span>
-                    <p class="hashTag">#PC #Scroll #DarkMode #OnePage #Slide</p>
-                  </div>
-                  <ul class="btns">
-                    <!-- <li class="btn">
+                  <div class="right">
+                    <div class="subTxt">
+                      <p class="workDesc">
+                        Scroll위치값에 따라 컨텐츠가 나타나는 모션을 적용했으며
+                        <br />
+                        다크모드를 지원하는 페이지입니다.<br />(작업기여도 100%)
+                      </p>
+                      <span class="arrow">arrow</span>
+                      <p class="hashTag">
+                        #PC #Scroll #DarkMode #OnePage #Slide
+                      </p>
+                    </div>
+                    <ul class="btns">
+                      <!-- <li class="btn">
                       <a href="">작업설명서 보기</a>
                       <span>arrow</span>
                     </li> -->
-                    <li class="btn"><a href="https://chloenam.github.io/archi_dark/" target="_blank">사이트 보러가기</a>
-
+                      <li class="btn">
+                        <a
+                          href="https://chloenam.github.io/archi_dark/"
+                          target="_blank"
+                          >사이트 보러가기</a
+                        >
+                      </li>
+                      <li class="btn">
+                        <a
+                          href="https://github.com/chloenam/archi_dark"
+                          target="_blank"
+                          >깃허브 저장소 보기</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="#" class="prev">PREV</a>
+              </div>
+            </div>
+            <div class="item">
+              <h4 class="itemTit">
+                toy<br />
+                project
+              </h4>
+              <div class="arrow"></div>
+            </div>
+            <div class="subPage toy">
+              <div class="bgCircle"></div>
+              <div class="inner">
+                <h3 class="subIntro">
+                  <a href="index.html">
+                    안녕하세요<br />
+                    웹 퍼블리셔<br />
+                    남현주입니다.
+                  </a>
+                </h3>
+                <div class="project">
+                  <div class="left">
+                    <strong class="title">toy project</strong>
+                  </div>
+                  <div class="right">
+                    <div class="subTxt">
+                      <p class="workDesc">
+                        공부를 시작했을 때 만든<br />
+                        HTML과 CSS로만 이루어진 원페이지 작업물입니다.
+                      </p>
+                      <span class="arrow">arrow</span>
+                      <p class="hashTag">#HTML #CSS #Toy #OnePage</p>
+                    </div>
+                  </div>
+                  <ul class="projectBox">
+                    <li class="toyItem">
+                      <a
+                        href="https://chloenam.github.io/portfolio_v1/+portfolio/Grid_/index.html"
+                        target="_blank"
+                      >
+                        <img
+                          src="assets/img/grid.png"
+                          alt="grid"
+                          class="thumb"
+                        />
+                        <div class="txt">
+                          <h4>Grid RWD</h4>
+                          <span>view</span>
+                        </div>
+                      </a>
                     </li>
-                    <li class="btn"><a href="https://github.com/chloenam/archi_dark" target="_blank">깃허브 저장소 보기</a>
-
+                    <li class="toyItem">
+                      <a
+                        href="https://chloenam.github.io/portfolio_v1/+portfolio/Aesop_/index.html"
+                        target="_blank"
+                      >
+                        <img
+                          src="assets/img/aesop.png"
+                          alt="aesop"
+                          class="thumb"
+                        />
+                        <div class="txt">
+                          <h4>Aesop Sub Page</h4>
+                          <span>view</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="toyItem">
+                      <a href="#">
+                        <img src="assets/img/ing.png" alt="ing" class="thumb" />
+                        <div class="txt"></div>
+                      </a>
                     </li>
                   </ul>
                 </div>
+                <a href="#" class="prev">PREV</a>
               </div>
-              <a href="#" class="prev">PREV</a>
             </div>
-          </div>
-          <div class="item">
-            <h4 class="itemTit">
-              toy<br>
-              project
-            </h4>
-            <div class="arrow"></div>
-          </div>
-          <div class="subPage toy">
-            <div class="bgCircle"></div>
-            <div class="inner">
-              <h3 class="subIntro">
-                <a href="index.html">
-                  안녕하세요<br>
-                  웹 퍼블리셔<br>
-                  남현주입니다.
-                </a>
-              </h3>
-              <div class="project">
-                <div class="left">
-                  <strong class="title">toy project</strong>
-                </div>
-                <div class="right">
-                  <div class="subTxt">
-                    <p class="workDesc">
-                      공부를 시작했을 때 만든<br>
-                      HTML과 CSS로만 이루어진 원페이지 작업물입니다.
-                    </p>
-                    <span class="arrow">arrow</span>
-                    <p class="hashTag">#HTML #CSS #Toy #OnePage</p>
-                  </div>
-                </div>
-                <ul class="projectBox">
-                  <li class="toyItem">
-                    <a href="https://chloenam.github.io/portfolio_v1/+portfolio/Grid_/index.html" target="_blank">
-                      <img src="assets/img/grid.png" alt="grid" class="thumb">
-                      <div class="txt">
-                        <h4>Grid RWD</h4>
-                        <span>view</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="toyItem">
-                    <a href="https://chloenam.github.io/portfolio_v1/+portfolio/Aesop_/index.html" target="_blank">
-                      <img src="assets/img/aesop.png" alt="aesop" class="thumb">
-                      <div class="txt">
-                        <h4>Aesop Sub Page</h4>
-                        <span>view</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="toyItem">
-                    <a href="#">
-                      <img src="assets/img/ing.png" alt="ing" class="thumb">
-                      <div class="txt">
-
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <a href="#" class="prev">PREV</a>
-            </div>
-          </div>
-        </article>
-      </section>
-
-    </div>
-  </main>
-
-
-</body>
-
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
